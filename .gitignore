@@ -5,7 +5,6 @@
 /.pnp
 .pnp.js
 
-dir_to_ignore/public
 
 # testing
 /coverage
