@@ -1,0 +1,37 @@
+/* Header */
+
+
+:root {
+  --darkpink: rgb(192, 36, 114);
+  --pink: rgb(214, 34, 139);
+  --blue: rgb(52, 190, 214);
+  --black: rgb(0, 0, 0);
+  --blacktransparent: rgba(0, 0, 0, 92%);
+  --darkgold: rgb(173, 110, 9);
+  --gold: rgb(204, 160, 14);
+  --white: rgb(202, 202, 202);
+  --pearl: rgb(231, 231, 231);
+  
+}
+
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    
+    text-align: center;
+    font-family: "Yomogi", sans-serif;
+    font-size: 60px;
+    color: whitesmoke;
+    text-shadow: 2px 2px var(--darkpink);
+}
+
+.title img {
+    overflow: hidden;
+    object-fit: cover;
+    height: 100px;
+    width: 100%;
+}

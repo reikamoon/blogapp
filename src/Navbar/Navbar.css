@@ -1,0 +1,49 @@
+/* Navbar */
+
+:root {
+  --darkpink: rgb(192, 36, 114);
+  --pink: rgb(214, 34, 139);
+  --blue: rgb(52, 190, 214);
+  --black: rgb(0, 0, 0);
+  --darkgold: rgb(173, 110, 9);
+  --gold: rgb(204, 160, 14);
+  --white: rgb(202, 202, 202);
+  --pearl: rgb(231, 231, 231);
+  
+  
+}
+
+.navbar {
+  background-color: var(--black);;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  overflow: hidden;
+  border: 3px solid;
+  border-top: 3px solid var(--pearl);
+  text-align: center;
+  padding: 15px;
+}
+
+.navbar:hover {
+    border: 3px solid var(--blue);
+}
+
+.navbar a {
+    color: whitesmoke;
+    font-size: 28px;
+    padding: 40px;
+    text-decoration: none;
+}
+
+.navbar a:nth-child(2) {
+    font-size: 50px;
+    text-decoration: underline dotted;
+    color: var(--darkpink);
+}
+
+.navbar a:hover {
+    color: var(--blue);
+}
+
+
+

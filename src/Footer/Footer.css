@@ -1,4 +1,6 @@
 .footer {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
     box-sizing: border-box;
     width: 100%;
     display: flex;
