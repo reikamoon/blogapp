@@ -7,7 +7,7 @@ function Navbar() {
       <div className="navbar">
         <a href="#articles">Articles</a>
         <a href="/">Chatterbox</a>
-        <a href="#about">About</a>
+        <a href="/about">About</a>
       </div>
     </div>
   );

@@ -1,0 +1,56 @@
+
+:root {
+  --darkpink: rgb(192, 36, 114);
+  --pink: rgb(214, 34, 139);
+  --blue: rgb(52, 190, 214);
+  --black: rgb(0, 0, 0);
+  --blacktransparent: rgba(0, 0, 0, 92%);
+  --darkgold: rgb(173, 110, 9);
+  --gold: rgb(204, 160, 14);
+  --white: rgb(202, 202, 202);
+  --pearl: rgb(231, 231, 231);
+}
+
+.featured {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
+    margin-left: 70px;
+    margin-right: 70px;
+
+
+
+    background-color: var(--blacktransparent);
+    padding: 5px;
+
+}
+
+.featuredcontent h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 40px;
+    color: var(--gold);
+    text-shadow: 2px 2px var(--black);
+    text-decoration: underline;
+}
+
+.featuredcontent h1:hover {
+    color: gold;
+}
+
+.featured img {
+    padding-top: 40px;
+    align-self: center;
+    transition: transform .2s; /* Animation */
+}
+
+.featured img:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.featuredcontent {
+    margin-top: 10px;
+    
+}

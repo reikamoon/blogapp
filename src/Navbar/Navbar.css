@@ -22,6 +22,9 @@
   border-top: 3px solid var(--pearl);
   text-align: center;
   padding: 15px;
+
+  margin-left: 70px;
+  margin-right: 70px;
 }
 
 .navbar:hover {
