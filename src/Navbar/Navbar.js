@@ -6,8 +6,8 @@ function Navbar() {
   return (
     <div>
       <div className="navbar">
-        <a href="#articles">Articles</a>
-        <a href="/">Chatterbox</a>
+        <Link to ="/articles">Articles</Link>
+        <Link to ="/">Chatterbox</Link>
         <Link to = "/about">About</Link>
       </div>
     </div>

@@ -11,17 +11,6 @@
   --pearl: rgb(231, 231, 231);
 }
 
-.ArticleList {
+.ArticleDetails {
     background-color: var(--blacktransparent);
-    color: var(--white);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
-    margin-left: 70px;
-    margin-right: 70px;
-    padding: 30px;
-
-    line-height: 30px;
-
 }

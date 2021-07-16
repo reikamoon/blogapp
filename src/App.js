@@ -14,9 +14,9 @@ function App() {
       <div className="App">
         <Header />
         <Navbar />
-        <Featured />
-        <Route exact path="/" component={ArticleList} />
-        <Route exact path="/about/" component={About} />
+        <Route exact path="/" component={Featured} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/articles" component={ArticleList} />
         <Footer />
       </div>
     </Router>

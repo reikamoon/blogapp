@@ -12,6 +12,14 @@
   },
 
   {
+      "id": 1,
+      "title": "My Favorite Flowers",
+      "author": "reikamoon",
+      "img": "sakura.jpeg",
+      "desc": "What my favorite flowers are!",
+      "body": "I love camellias, sakura, and peonies.",
+      "tags": ["blabber", "flowers"]
+  
 
   }
 
