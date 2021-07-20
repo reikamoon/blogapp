@@ -36,8 +36,8 @@ Before installing, make sure you have Node.js/npm installed.
 ```git clone https://github.com/reikamoon/blogapp.git```<br>
 :two: Install dependencies for the <b>Front End</b> side.<br>
 ```cd frontend```<br>
-```npm install```
-:three: Install the depedencies for the <b>Back End</b> side.
+```npm install```<br>
+:three: Install the depedencies for the <b>Back End</b> side.<br>
 ```cd backend```<br>
 ```npm install```
 
