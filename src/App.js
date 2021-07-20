@@ -6,7 +6,8 @@ import Footer from './Footer/Footer';
 import Navbar from './Navbar/Navbar';
 import Featured from './Featured/Featured';
 import About from './About/About';
-import ArticleList from './ArticleList/ArticleList'
+import ArticleList from './ArticleList/ArticleList';
+import Article from './Article/Article';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/" component={Featured} />
         <Route exact path="/about" component={About} />
         <Route exact path="/articles" component={ArticleList} />
+        <Route path="/details/:id" component={Article} />
         <Footer />
       </div>
     </Router>

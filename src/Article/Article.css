@@ -1,0 +1,43 @@
+:root {
+  --darkpink: rgb(192, 36, 114);
+  --pink: rgb(214, 34, 139);
+  --blue: rgb(52, 190, 214);
+  --black: rgb(0, 0, 0);
+  --blacktransparent: rgba(0, 0, 0, 92%);
+  --darkgold: rgb(173, 110, 9);
+  --gold: rgb(204, 160, 14);
+  --white: rgb(202, 202, 202);
+  --pearl: rgb(231, 231, 231);
+}
+
+.Article {
+    font-family: "Raleway";
+
+    margin-left: 70px;
+    margin-right: 70px;
+    padding: 30px;
+
+    background-color: var(--blacktransparent);
+    color: var(--white);
+}
+
+.Article H1 {
+    font-size: 40px;
+    text-shadow: 2px 2px var(--darkpink);
+}
+
+.Article p {
+    line-height: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
+}
+
+
+.tags {
+    background-color: var(--blacktransparent);
+    color: var(--white);
+
+    margin-left: 70px;
+    margin-right: 70px;
+}

@@ -13,4 +13,10 @@
 
 .ArticleDetails {
     background-color: var(--blacktransparent);
+    font-family: "Raleway", sans-serif;
+    color: var(--white);
+}
+
+.ArticleDetails h1 {
+  text-shadow: 2px 2px var(--darkpink);
 }

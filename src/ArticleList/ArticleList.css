@@ -14,14 +14,17 @@
 .ArticleList {
     background-color: var(--blacktransparent);
     color: var(--white);
+    font-family: "Raleway", sans-serif;
+    line-height: 5px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
     margin-left: 70px;
     margin-right: 70px;
-    padding: 30px;
+    padding: 70px;
 
     line-height: 30px;
 
 }
+
