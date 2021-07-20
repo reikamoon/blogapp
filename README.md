@@ -26,7 +26,7 @@ Users can read articles that I wrote for my blog.
 <a name="warning"></a>
 ## Warning :bangbang:
 Before installing, make sure you have Node.js/npm installed.
->[Node Installation](https://nodejs.org/en/download/)
+>[Node Installation](https://nodejs.org/en/download/)<br>
 >[Npm Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 
