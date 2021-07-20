@@ -31,7 +31,7 @@ Before installing, make sure you have Node.js/npm installed.
 
 
 <a name="installation"></a>
-##Installation :wrench:
+## Installation :wrench:
 :one: Clone the repository
 ```git clone https://github.com/reikamoon/blogapp.git```<br>
 :two: Install dependencies for the <b>Front End</b> side.
