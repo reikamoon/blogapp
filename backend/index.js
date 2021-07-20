@@ -39,7 +39,7 @@ async function listDatabases(client) {
 
 // Placeholder
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Homepage");
 });
 
 // Choose a port to listen on
