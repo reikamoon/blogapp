@@ -2,12 +2,12 @@
 by reikamoon :ribbon:
 
 ## Table of Contents :paperclip:
-[Preview](#img)
-[Project Description](#desc)
-[Technologies Used](#tech)
-[Warnings Before Installation](#warning)
-[Installation](#installation)
-[Resources](#resources)
+[Preview](#img)<br>
+[Project Description](#desc)<br>
+[Technologies Used](#tech)<br>
+[Warnings Before Installation](#warning)<br>
+[Installation](#installation)<br>
+[Resources](#resources)<br>
 
 <a name="img"></a>
 ## Previews :open_file_folder:
@@ -15,12 +15,12 @@ by reikamoon :ribbon:
 <i>Preview Image of My Blog App so Far!</i>
 
 <a name="desc"></a>
-##Project Description :memo:
+## Project Description :memo:
 Full Stack Blog App created with REACT, Node.js, and uses MongoDB for the database.
 Users can read articles that I wrote for my blog.
 
 <a name="tech"></a>
-##Technologies Used :hammer:
+## Technologies Used :hammer:
 <b>React, Node.js, Express, React Router Dom, MongoDB </b>
 
 <a name="warning"></a>
