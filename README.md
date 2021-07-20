@@ -43,8 +43,8 @@ Before installing, make sure you have Node.js/npm installed.
 
 <a name="resources"></a>
 ## Resources :book:
-Image(s) found on [Unsplash](unsplash.com)
-Raleway Font from [Google Fonts](https://fonts.google.com/specimen/Raleway?query=raleway)
-Icons from [Font Awesome v.5](https://fontawesome.com/v5.15/icons?d=gallery&p=2)
+Image(s) found on [Unsplash](unsplash.com)<br>
+Raleway Font from [Google Fonts](https://fonts.google.com/specimen/Raleway?query=raleway)<br>
+Icons from [Font Awesome v.5](https://fontawesome.com/v5.15/icons?d=gallery&p=2)<br>
 
 
