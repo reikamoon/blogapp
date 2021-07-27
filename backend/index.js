@@ -42,6 +42,26 @@ app.get("/", (req, res) => {
   res.send("Homepage");
 });
 
+// PLACEHOLDER
+// CREATE COMMENT
+app.post('/posts/:postId/comments', (req, res) => {
+  // INSTANTIATE INSTANCE OF MODEL
+  const comment = new Comment(req.body);
+
+  // SAVE INSTANCE OF Comment MODEL TO DB
+  comment
+    .save()
+    .then(() => Post.findById(req.params.postId))
+    .then((post) => {
+      post.comments.unshift(comment);
+      return post.save();
+    })
+    .then(() => res.redirect('/'))
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 // Choose a port to listen on
 const port = process.env.PORT || 3100;
 

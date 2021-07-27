@@ -6,7 +6,8 @@
       "img": "computer.jpg",
       "desc": "Step-by-Step How I Created This Blog.",
       "body": "Blogs are a great way to express creative freedom! \n I made this blog using only React for the front end, node.js for the back-end, and postgresSQL as the database.",
-      "tags": ["techtalk", "softwaredevelopment"]
+      "tags": ["techtalk", "softwaredevelopment"],
+      "comments": []
   
 
   },
@@ -18,7 +19,8 @@
       "img": "sakura.jpeg",
       "desc": "What my favorite flowers are!",
       "body": "I love camellias, sakura, and peonies.",
-      "tags": ["blabber", "flowers"]
+      "tags": ["blabber", "flowers"],
+      "comments": []
   
 
   },
@@ -30,7 +32,8 @@
       "img": "reika2.png",
       "desc": "A little bit about me!",
       "body": "My name is Reika! I am a CS student with a concentration in back-end web.",
-      "tags": ["blabber", "reikamoon"]
+      "tags": ["blabber", "reikamoon"],
+      "comments":[]
   
 
   }
