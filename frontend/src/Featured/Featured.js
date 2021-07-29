@@ -17,8 +17,8 @@ function Featured() {
         </Link>
         <div className="featuredcontent">
           <h1>
-            <i class="fas fa-star"></i>Featured Article
-            <i class="fas fa-star"></i>
+            <i className="fas fa-star"></i>Featured Article
+            <i className="fas fa-star"></i>
           </h1>
           <Link to={"/details/0"}>
             <h2>Creating Your Own Blog</h2>
