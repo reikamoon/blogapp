@@ -48,6 +48,8 @@ app.post('/posts/:postId/comments', (req, res) => {
   // INSTANTIATE INSTANCE OF MODEL
   const comment = new Comment(req.body);
 
+  ///PostGres
+
   // SAVE INSTANCE OF Comment MODEL TO DB
   comment
     .save()
