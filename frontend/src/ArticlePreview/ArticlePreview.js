@@ -1,8 +1,8 @@
 import React from "react";
-import "../data.json";
 import { Link } from "react-router-dom";
+import './ArticlePreview.css'
 
-function ArticleDetails(props) {
+function ArticlePreview(props) {
   const { id, title, author, img, desc, tags } = props;
   return (
     <div className="ArticleDetails">
@@ -25,4 +25,4 @@ function ArticleDetails(props) {
   );
 }
 
-export default ArticleDetails;
+export default ArticlePreview;

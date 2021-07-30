@@ -1,29 +1,46 @@
-import React from "react";
-import ArticleDetails from "../ArticleDetails/ArticleDetails"
+import { useEffect, useState } from "react";
+import ArticlePreview from "../ArticlePreview/ArticlePreview";
 import "./ArticleList.css";
-import data from "../data.json";
 
 function ArticleList() {
-  const articles = data.map(
-    ({ title, author, img, desc, tags}, i) => {
-      return (
-        <ArticleDetails
-          id={i}
-          title={title}
-          author={author}
-          img={img}
-          desc={desc}
-          tags={tags}
-        />
-      );
-    }
-  );
+  const [articles, setArticles] = useState([]);
 
-  return (
-        <div className="ArticleList">
-        {articles}
-        </div>
-  )
+  // Use Effect is to prevent an infinite loop of getting articles.
+  useEffect(() => {
+    // Fetch the list of articles from the MongoDB.
+
+    async function getArticles() {
+      try {
+        const res = await fetch("/articles", {
+          headers: { accepts: "application/json" },
+        });
+        const json = await res.json();
+        console.log(json);
+        return setArticles(json.articles);
+      } catch (err) {
+        return console.log(err);
+      }
+    }
+
+    // Calls getArticles() on Mount.
+    getArticles();
+  }, []);
+
+  const articleList = articles.map(({ title, author, img, desc, tags }, i) => {
+    return (
+      <ArticlePreview
+        id={i}
+        key={i}
+        title={title}
+        author={author}
+        img={img}
+        desc={desc}
+        tags={tags}
+      />
+    );
+  });
+
+  return <div className="ArticleList">{articleList}</div>;
 }
 
 export default ArticleList;
