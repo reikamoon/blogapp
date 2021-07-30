@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./CommentForm.css";
 
 function CommentForm() {
 //   const { handleSubmit, control, reset } = useForm();
@@ -30,7 +31,7 @@ function CommentForm() {
 
 
   return (
-    <div>
+    <div className = "commentform">
       <form onSubmit={onSubmit}>
         <label htmlFor="Name">Name</label>
         <input id="Name" name="Name" type="text" value={values.name} onChange={handleNameChange}></input>

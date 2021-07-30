@@ -1,0 +1,87 @@
+
+:root {
+  --darkpink: rgb(192, 36, 114);
+  --pink: rgb(214, 34, 139);
+  --blue: rgb(52, 190, 214);
+  --black: rgb(0, 0, 0);
+  --blacktransparent: rgba(0, 0, 0, 92%);
+  --darkgold: rgb(173, 110, 9);
+  --gold: rgb(204, 160, 14);
+  --white: rgb(202, 202, 202);
+  --pearl: rgb(231, 231, 231);
+}
+
+.commentform {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 200px;
+    padding:20px;
+}
+
+
+/* Forms */
+input{
+    font-family: "Raleway";
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+
+}
+
+label {
+    box-sizing: border-box;
+    font-family: "Raleway";
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+
+input[type=text] {
+    border-radius: 10px;
+    border-color: var(--darkpink);
+    background-color: var(--blacktransparent);
+    color: whitesmoke;
+    padding: 12px 20px;
+    display: inline-block;
+
+
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    width: 100%;
+}
+
+textarea {
+    border-radius: 10px;
+    border-color: var(--darkpink);
+    background-color: var(--blacktransparent);
+    color: var(--white);
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    width: 100%;
+
+}
+
+
+
+input[type=submit] {
+    background-color: var(--pink);
+    color: whitesmoke;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--darkpink);
+}
