@@ -40,7 +40,10 @@ function ArticleList() {
     );
   });
 
-  return <div className="ArticleList">{articleList}</div>;
-}
+  return (
+    <div className="ArticleList">
+    {articleList}
+    </div>
+  )}
 
 export default ArticleList;

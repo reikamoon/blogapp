@@ -20,7 +20,6 @@ function Article(props) {
       />
       <p>{body}</p>
       <h2>Tags</h2><div className="tags">{tags[0]} {tags[1]} {tags[2]}</div>
-
       <CommentForm />
     </div>
   );
