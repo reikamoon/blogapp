@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../data.json";
 import "./Article.css";
+import CommentForm from "../CommentForm/CommentForm";
 
 function Article(props) {
   const { id } = props.match.params // Location index
@@ -19,6 +20,8 @@ function Article(props) {
       />
       <p>{body}</p>
       <h2>Tags</h2><div className="tags">{tags[0]} {tags[1]} {tags[2]}</div>
+
+      <CommentForm />
     </div>
   );
 }

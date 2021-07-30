@@ -20,6 +20,7 @@ function ArticleDetails(props) {
       <h3>by {author}</h3>
       <p>{desc}</p>
       <p>Tags: {tags[0]}, {tags[1]}</p>
+      
     </div>
   );
 }

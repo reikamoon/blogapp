@@ -8,7 +8,6 @@ import Featured from './Featured/Featured';
 import About from './About/About';
 import ArticleList from './ArticleList/ArticleList';
 import Article from './Article/Article';
-import CommentForm from './CommentForm/CommentForm';
 import NotFound from './NotFound/NotFound';
 
 function App() {
@@ -22,9 +21,8 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/articles" component={ArticleList} />
           <Route path="/details/:id" component={Article} />
-          <Route path="notfound" component={NotFound} />
+          <Route component={NotFound} />
         </Switch>
-        <CommentForm />
         <Footer />
       </div>
     </Router>

@@ -1,73 +1,114 @@
 require("dotenv").config();
+
 // Initialize express
 const express = require("express");
 const app = express();
 
+/// Express Ver 4+ Does Not Need BodyParser Anymore
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
+// MongoDB
 const { MongoClient } = require("mongodb");
-const mongopw = process.env.MONGO_PW;
+const mongoPw = process.env.MONGO_PW;
+const mongoUser = process.env.MONGO_USER;
 
-async function main() {
-  /**
-   * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
-   * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
-   */
-  const uri = `mongodb+srv://Anjelica:${mongopw}@chatterbox.6ryms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"`;
+const uri = `mongodb+srv://${mongoUser}:${mongoPw}@chatterbox.6ryms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"`;
 
-  const client = new MongoClient(uri);
+const client = new MongoClient(uri);
+const db = client.db("blogapp")
+const articlesCollection = db.collection("Articles")
 
-  try {
-    // Connect to the MongoDB cluster
-    await client.connect();
 
-    // Make the appropriate DB calls
-    await listDatabases(client);
-  } catch (e) {
-    console.error(e);
-  } finally {
-    await client.close();
-  }
-}
-
-main().catch(console.error);
-
+// List Databases
 async function listDatabases(client) {
-  databasesList = await client.db().admin().listDatabases();
+    databasesList = await client.db().admin().listDatabases()
 
-  console.log("Databases:");
-  databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
+    console.log("Databases:");
+    databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
 }
 
-// Placeholder
-app.get("/", (req, res) => {
-  res.send("Homepage");
-});
+// Show Articles and Number of Articles
+async function main() {
+  await client.connect(async (err, client) => {
+    if (err) return console.log(err);
 
-// PLACEHOLDER
-// CREATE COMMENT
-app.post('/posts/:postId/comments', (req, res) => {
-  // INSTANTIATE INSTANCE OF MODEL
-  const comment = new Comment(req.body);
+    console.log(`Connected to db\n`);
 
-  ///PostGres
+    // Show list of items currently in the db
+    listDatabases(client);
+    await articlesCollection
+      .find()
+      .toArray()
+      .then((articles) => {
+        articles.map((article) =>
+          console.log(
+            `Title: ${article.title} Comments: ${article.comments.length}`
+          )
+        );
+      });
+  });
 
-  // SAVE INSTANCE OF Comment MODEL TO DB
-  comment
-    .save()
-    .then(() => Post.findById(req.params.postId))
-    .then((post) => {
-      post.comments.unshift(comment);
-      return post.save();
-    })
-    .then(() => res.redirect('/'))
-    .catch((err) => {
-      console.log(err);
-    });
-});
+  // HEALTH CHECK
+  app.get("/health", (req, res) => {
+    res.send({ msg: "Vibe Check" });
+  });
+
+  // ARTICLES LIST
+  app.get("/articles", (req, res) => {
+    articlesCollection
+      .find()
+      .toArray()
+      .then((articles) => {
+        // console.log(articles);
+        res.send({ articles });
+      });
+  });
+
+  // POST COMMENTS
+  app.post("/articles/:articleId/comment", (req, res) => {
+    const articleId = { id: parseInt(req.params.articleId) };
+
+    const pushComment = {
+      $push: {
+        comments: {
+          createdAt: new Date(),
+          name: req.body.name,
+          comment: req.body.comment,
+        },
+      },
+    };
+
+    articlesCollection
+      .findOneAndUpdate(articleId, pushComment)
+      .then(() => {
+        console.log(`Comment added to MongoDB id: ${articleId.id}`);
+        res.send({
+          status: "success",
+          msg: "Comment added successfully",
+          comment: req.body.comment,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        res.send({
+          status: "err",
+          error: err,
+        });
+      });
+  });
+}
+
 
 // Choose a port to listen on
-const port = process.env.PORT || 3100;
+const port = process.env.PORT || 3200;
 
 // Tell the app what port to listen on
 app.listen(port, () => {
-  console.log("App listening on port 3100!");
+  console.log(`App listening on port ${port}!`);
 });
+
+main()
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => client.close())
