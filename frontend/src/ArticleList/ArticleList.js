@@ -8,17 +8,16 @@ function ArticleList() {
   // Use Effect is to prevent an infinite loop of getting articles.
   useEffect(() => {
     // Fetch the list of articles from the MongoDB.
-
     async function getArticles() {
       try {
         const res = await fetch("/articles", {
-          headers: { accepts: "application/json" },
+          headers: { accepts: "application/json" }
         });
-        const json = await res.json();
-        console.log(json);
-        return setArticles(json.articles);
+        const json = await res.json()
+        console.log(json)
+        return setArticles(json.articles)
       } catch (err) {
-        return console.log(err);
+        return console.log(err)
       }
     }
 
@@ -40,10 +39,7 @@ function ArticleList() {
     );
   });
 
-  return (
-    <div className="ArticleList">
-    {articleList}
-    </div>
-  )}
+  return <div className="ArticleList">{articleList}</div>;
+}
 
 export default ArticleList;
