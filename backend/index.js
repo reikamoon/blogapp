@@ -5,8 +5,8 @@ const express = require("express");
 const app = express();
 
 /// Express Ver 4+ Does Not Need BodyParser Anymore
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // MongoDB
 const { MongoClient } = require("mongodb");
@@ -16,16 +16,15 @@ const mongoUser = process.env.MONGO_USER;
 const uri = `mongodb+srv://${mongoUser}:${mongoPw}@chatterbox.6ryms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"`;
 
 const client = new MongoClient(uri);
-const db = client.db("blogapp")
-const articlesCollection = db.collection("Articles")
-
+const db = client.db("blogapp");
+const articlesCollection = db.collection("Articles");
 
 // List Databases
 async function listDatabases(client) {
-    databasesList = await client.db().admin().listDatabases()
+  databasesList = await client.db().admin().listDatabases();
 
-    console.log("Databases:");
-    databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
+  console.log("Databases:");
+  databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
 }
 
 // Show Articles and Number of Articles
@@ -51,7 +50,7 @@ async function main() {
 
   // HEALTH CHECK
   app.get("/health", (req, res) => {
-    res.send({ msg: "Vibe Check" });
+    res.send({ msg: "All good!" });
   });
 
   // ARTICLES LIST
@@ -99,7 +98,6 @@ async function main() {
   });
 }
 
-
 // Choose a port to listen on
 const port = process.env.PORT || 3200;
 
@@ -111,4 +109,4 @@ app.listen(port, () => {
 main()
   .then(console.log)
   .catch(console.error)
-  .finally(() => client.close())
+  .finally(() => client.close());
