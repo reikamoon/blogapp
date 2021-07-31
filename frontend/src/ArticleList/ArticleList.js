@@ -27,15 +27,17 @@ function ArticleList() {
 
   const articleList = articles.map(({ title, author, img, desc, tags }, i) => {
     return (
-      <ArticlePreview
-        id={i}
-        key={i}
-        title={title}
-        author={author}
-        img={img}
-        desc={desc}
-        tags={tags}
-      />
+      <div className="articlepreview">
+        <ArticlePreview
+          id={i}
+          key={i}
+          title={title}
+          author={author}
+          img={img}
+          desc={desc}
+          tags={tags}
+        />
+      </div>
     );
   });
 

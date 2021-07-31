@@ -7,7 +7,12 @@
       "desc": "Step-by-Step How I Created This Blog.",
       "body": "Blogs are a great way to express creative freedom! \n I made this blog using only React for the front end, node.js for the back-end, and postgresSQL as the database.",
       "tags": ["techtalk", "softwaredevelopment"],
-      "comments": []
+      "comments": [
+          {"name": "Anjelica", "comment": "Hello!", "createdAt": "July 30th, 2021"}, 
+          {"name": "Bella", "comment": "Great work!", "createdAt": "July 30th, 2021"},
+          {"name": "Bert", "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis pellentesque porttitor. Donec urna turpis, congue eget nunc non, aliquam varius massa. Aliquam porttitor tristique nisi eu pellentesque. Pellentesque id pulvinar felis, vitae facilisis risus. Sed elementum, turpis eget bibendum finibus, nisi leo ultrices risus, quis lobortis lectus metus id tortor. Nam interdum velit sit amet massa ullamcorper posuere. Vivamus vitae ligula lobortis, dignissim sapien pharetra, convallis ex. Phasellus in pulvinar ipsum, vel rhoncus nulla. Pellentesque sed sapien eu mi dignissim vehicula et ut elit. Aliquam tristique convallis lobortis. Integer dignissim orci at rutrum feugiat. Phasellus lobortis risus at elit tincidunt, eu vehicula magna sodales. Nunc nec varius odio, eget lobortis tellus. Maecenas blandit purus eget commodo venenatis. Aenean rhoncus est diam, suscipit viverra leo tristique nec. Cras venenatis, lacus a imperdiet feugiat, tortor velit placerat nibh, a efficitur leo nunc a nunc.", "createdAt":"July 30th, 2021"},
+          {"name": "Melody", "comment": "Loved your article!", "createdAt":"July 30th, 2021"}
+        ]
   
 
   },

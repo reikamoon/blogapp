@@ -13,9 +13,8 @@
 
 .commentform {
     display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 200px;
+    align-items: center;
+    justify-items: center;
     padding:20px;
 }
 
@@ -34,7 +33,8 @@ label {
     box-sizing: border-box;
     font-family: "Raleway";
     font-size: 25px;
-    color: whitesmoke;
+    color: var(--white);
+    position: relative;
 }
 
 
@@ -42,14 +42,14 @@ input[type=text] {
     border-radius: 10px;
     border-color: var(--darkpink);
     background-color: var(--blacktransparent);
-    color: whitesmoke;
+    color: var(--white);
     padding: 12px 20px;
     display: inline-block;
 
 
     font-family: "Raleway", sans-serif;
     font-size: 20px;
-    width: 100%;
+    width: 90%;
 }
 
 textarea {

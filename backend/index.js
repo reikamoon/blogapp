@@ -65,7 +65,7 @@ async function main() {
   });
 
   // POST COMMENTS
-  app.post("/articles/:articleId/comment", (req, res) => {
+  app.post("/articles/details/:id/comment", (req, res) => {
     const articleId = { id: parseInt(req.params.articleId) };
 
     const pushComment = {
