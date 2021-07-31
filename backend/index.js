@@ -54,7 +54,7 @@ async function main() {
   });
 
   // ARTICLES LIST
-  app.get("/articles", (req, res) => {
+  app.get("/all", (req, res) => {
     articlesCollection
       .find()
       .toArray()
@@ -64,9 +64,10 @@ async function main() {
       });
   });
 
+
   // POST COMMENTS
   app.post("/articles/details/:id/comment", (req, res) => {
-    const articleId = { id: parseInt(req.params.articleId) };
+    const articleId = { id: parseInt(req.params.id) };
 
     const pushComment = {
       $push: {

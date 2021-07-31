@@ -10,7 +10,7 @@ function ArticleList() {
     // Fetch the list of articles from the MongoDB.
     async function getArticles() {
       try {
-        const res = await fetch("/articles", {
+        const res = await fetch("/all", {
           headers: { accepts: "application/json" }
         });
         const json = await res.json()
@@ -41,7 +41,9 @@ function ArticleList() {
     );
   });
 
-  return <div className="ArticleList">{articleList}</div>;
+  return (
+    <div className="ArticleList">{articleList}</div>
+  )
 }
 
 export default ArticleList;
