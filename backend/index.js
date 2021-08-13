@@ -82,6 +82,44 @@ async function main() {
       });
   });
 
+   // POST ARTICLES
+  app.post("/articles/details/:id", (req, res) => {
+    const articleId = { id: parseInt(req.params.id) };
+
+    const pushArticle = {
+      $push: {
+        articles: {
+          createdAt: new Date(),
+          title: req.body.title,
+          author: req.body.author,
+          img: req.body.img,
+          desc: req.body.desc,
+          body: req.body.body
+        },
+      },
+    };
+
+    articlesCollection
+      .findOneAndUpdate(articleId, pushArticle)
+      .then(() => {
+        console.log(`Article added to MongoDB id: ${articleId.id}`);
+        res.send({
+          status: "success",
+          msg: "Comment added successfully",
+          title: req.body.title,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        res.send({
+          status: "err",
+          error: err,
+        });
+      });
+  });
+}
+
+
   // POST COMMENTS
   app.post("/articles/details/:id/comment", (req, res) => {
     const articleId = { id: parseInt(req.params.id) };

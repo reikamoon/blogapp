@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./ArticleForm.css";
 
 function ArticleForm() {
-  //   const { handleSubmit, control, reset } = useForm();
   const [values, setValues] = useState({
     title: "",
     author: "",
