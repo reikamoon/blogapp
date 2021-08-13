@@ -25,17 +25,17 @@ function ArticleList() {
     getArticles();
   }, []);
 
-  const articleList = articles.map(({ title, author, img, desc, tags }, i) => {
+  const articleList = articles.map(({ id, title, author, img, desc, tags, comments }, i) => {
     return (
-      <div className="articlepreview">
+      <div className="articlepreview" key={id}>
         <ArticlePreview
-          id={i}
-          key={i}
+          id={id}
           title={title}
           author={author}
           img={img}
           desc={desc}
           tags={tags}
+          comments={comments}
         />
       </div>
     );

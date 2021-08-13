@@ -1,19 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-// import data from "../data.json";
+import data from "../data.json";
 import "./Article.css";
 import CommentForm from "../CommentForm/CommentForm";
 import Comments from "../Comments/Comments";
 
-function Article() {
-  // const { id } = props.match.params // Location index
-  const location = useLocation();
-  const { id, title, author, img, body, tags, comments } = location.state
-  // console.log(tags);
-
-     // <div className="tags">
-      //   {tags[0]} {tags[1]} {tags[2]}
-      // </div> 
+function Article(props) {
+  const { id } = props.match.params // Location index
+  const {title, author, img, body, tags, comments } = data[id]
+  console.log(tags);
 
   return (
     <div className="Article">
@@ -28,6 +23,9 @@ function Article() {
       <p>{body}</p>
       <i className="fas fa-heart"></i> Like
       <h2>Tags</h2>
+      <div className="tags">
+        {tags[0]} {tags[1]} {tags[2]}
+      </div>
       <h1> Comments </h1>
       <div className="commentsection">
         <div className="commentform">
