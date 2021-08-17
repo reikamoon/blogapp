@@ -21,7 +21,9 @@ function Article(props) {
         alt="Article"
       />
       <p>{body}</p>
-      <i className="fas fa-heart"></i> Like
+
+      <i className="fas fa-heart"></i> Like //Upvote
+
       <h2>Tags</h2>
       <div className="tags">
         {tags[0]} {tags[1]} {tags[2]}

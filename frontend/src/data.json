@@ -7,6 +7,7 @@
       "desc": "Step-by-Step How I Created This Blog.",
       "body": "Blogs are a great way to express creative freedom! \n I made this blog using only React for the front end, node.js for the back-end, and postgresSQL as the database.",
       "tags": ["techtalk", "softwaredevelopment"],
+      "upvotes": 0,
       "comments": [
           {"name": "Anjelica", "comment": "Hello!", "createdAt": "July 30th, 2021"}, 
           {"name": "Bella", "comment": "Great work!", "createdAt": "July 30th, 2021"},
@@ -25,6 +26,7 @@
       "desc": "What my favorite flowers are!",
       "body": "I love camellias, sakura, and peonies.",
       "tags": ["blabber", "flowers"],
+      "upvotes": 0,
       "comments": []
   
 
@@ -38,6 +40,7 @@
       "desc": "A little bit about me!",
       "body": "My name is Reika! I am a CS student with a concentration in back-end web.",
       "tags": ["blabber", "reikamoon"],
+      "upvotes": 0,
       "comments":[]
   
 
