@@ -82,7 +82,25 @@ async function main() {
       });
   });
 
-   // POST ARTICLES
+  // GET ARTICLE BY ID
+  app.get("/article/:id", (req, res) => {
+    const articleId = { id: parseInt(req.params.id) };
+
+    articlesCollection
+      .findOne(articleId)
+      .then((article) => {
+        res.send({ article });
+      })
+      .catch((err) => {
+        console.log(err);
+        res.send({
+          msg: "Error",
+          error: err,
+        });
+      });
+  });
+
+  // POST ARTICLES
   app.post("/articles/details/:id", (req, res) => {
     const articleId = { id: parseInt(req.params.id) };
 
@@ -94,7 +112,7 @@ async function main() {
           author: req.body.author,
           img: req.body.img,
           desc: req.body.desc,
-          body: req.body.body
+          body: req.body.body,
         },
       },
     };
@@ -117,25 +135,6 @@ async function main() {
         });
       });
   });
-}
-
-
-// GET COMMENTS
-
-// Notes -
-// withDB(async(db)=>{
-//     const articleInfo = await db.collection('articles').findOne({name:articleName});
-//     await db.collection('articles').updateOne({name:articleName},
-//     { $set: { comments:articleInfo.comments.concat({username,text})} });
-//     const updatedArticleInfo = await db.collection('articles').findOne({name:articleName});
-//     res.status(200).json(updatedArticleInfo);
-//   },res);
-// });
-// 5:48
-// await db.collection('articles').updateOne({name:articleName},
-//     { $set: { comments:articleInfo.comments.concat({username,text})} });
-//     const updatedArticleInfo = await db.collection('articles').findOne({name:articleName});
-
 
   // POST COMMENTS
   app.post("/articles/details/:id/comment", (req, res) => {
@@ -169,6 +168,7 @@ async function main() {
         });
       });
   });
+}
 
 // Choose a port to listen on
 const port = process.env.PORT || 3200;
