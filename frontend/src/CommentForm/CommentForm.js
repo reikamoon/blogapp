@@ -9,7 +9,8 @@ function CommentForm() {
   });
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(values)
+    // TO DO: Push the form to the DB (BackEnd), DEPLOY
+    
 
 }
 

@@ -170,29 +170,6 @@ async function main() {
   });
 }
 
-// Add Comments to DB
-  // CREATE Comment
-   app.post("/articles/details/:id/comment", function (req, res) {
-       const comment = new Comment(req.body);
-       comment.author = req.name;
-       comment
-           .save()
-           .then(comment => {
-               return Promise.all([
-                   article.findById(req.params.postId)
-               ]);
-           })
-           .then(([articles, user]) => {
-               articles.comments.unshift(comment);
-               return Promise.all([
-                   articles.save()
-               ]);
-           })
-           .catch(err => {
-               console.log(err);
-           });
-   });
-
 
 // Choose a port to listen on
 const port = process.env.PORT || 3200;
