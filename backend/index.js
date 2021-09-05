@@ -13,7 +13,7 @@ const { MongoClient } = require("mongodb");
 const mongoPw = process.env.MONGO_PW;
 const mongoUser = process.env.MONGO_USER;
 
-const uri = `mongodb+srv://${mongoUser}:${mongoPw}@chatterbox.6ryms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"`;
+const uri = `mongodb+srv://${mongoUser}:${mongoPw}@chatterbox.6ryms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 const client = new MongoClient(uri);
 const db = client.db("blogapp");
