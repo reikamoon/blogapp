@@ -2,6 +2,8 @@
 "scripts": {
     "build": "cd frontend && npm i && cd ../backend && npm i",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
-    }
-
+    },
+"engines": {
+    "node": "12.22.3"
+}
 }
