@@ -4,9 +4,14 @@
   "description": "Blog app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node server/index.js",
+    "build": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+    "engines": {
+        "node": "12.22.3"
+    },
+
   "author": "reikamoon",
   "license": "ISC",
   "dependencies": {

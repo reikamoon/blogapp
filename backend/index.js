@@ -1,4 +1,5 @@
 require("dotenv").config();
+const path = require('path')
 
 // Initialize express
 const express = require("express");
@@ -7,6 +8,8 @@ const app = express();
 /// Express Ver 4+ Does Not Need BodyParser Anymore
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+
 
 // MongoDB
 const { MongoClient } = require("mongodb");
@@ -26,6 +29,10 @@ async function listDatabases(client) {
   console.log("Databases:");
   databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
 }
+
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 // Show Articles and Number of Articles
 async function main() {
