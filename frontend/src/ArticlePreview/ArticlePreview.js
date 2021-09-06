@@ -15,13 +15,14 @@ function ArticlePreview(props) {
           alt="Article"
         />
       </Link>
-      <h1>
-        {title}
-      </h1>
+      <Link to={`/details/${id}`}>
+        <h1>{title}</h1>
+      </Link>
       <h3>by {author}</h3>
       <p>{desc}</p>
-      <p>Tags: {tags[0]}, {tags[1]}</p>
-      
+      <p>
+        Tags: {tags[0]}, {tags[1]}
+      </p>
     </div>
   );
 }
