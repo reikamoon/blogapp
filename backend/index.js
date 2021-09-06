@@ -34,10 +34,6 @@ async function listDatabases(client) {
   databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
 }
 
-// app.get("/*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "build", "index.html"));
-// });
-
 // Show Articles and Number of Articles
 async function main() {
   await client.connect(async (err, client) => {
