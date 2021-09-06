@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import ArticlePreview from "../ArticlePreview/ArticlePreview";
 import "./ArticleList.css";

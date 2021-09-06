@@ -8,7 +8,11 @@ const app = express();
 /// Express Ver 4+ Does Not Need BodyParser Anymore
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+// If in production, then use static frontend build files.
+if (process.env.NODE_ENV === 'production') {
+    // Serve any static files
+    app.use(express.static(path.join(__dirname, '../frontend/build')));
+}
 
 
 // MongoDB
