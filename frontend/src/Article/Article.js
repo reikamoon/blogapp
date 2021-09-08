@@ -39,8 +39,6 @@ function Article(props) {
         alt="Article"
       />
       <p>{article.body}</p>
-      <h2>Tags</h2>
-      {/* { tags.map(tag => tag)} */}
       <h1> Comments </h1>
       <div className="commentsection">
         <div className="commentform">
