@@ -60,24 +60,6 @@ async function main() {
     res.send({ msg: "All good!" });
   });
 
-  // GET ARTICLE BY ID
-  app.get("/details/:id", (req, res) => {
-    const articleId = { id: parseInt(req.params.id) };
-
-    articlesCollection
-      .findOne(articleId)
-      .then((article) => {
-        res.send({ article });
-      })
-      .catch((err) => {
-        console.log(err);
-        res.send({
-          msg: "Error",
-          error: err,
-        });
-      });
-  });
-
   // ARTICLES LIST
   app.get("/all", (req, res) => {
     articlesCollection
