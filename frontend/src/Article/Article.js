@@ -39,7 +39,6 @@ function Article(props) {
         alt="Article"
       />
       <p>{article.body}</p>
-      <i className="fas fa-heart"></i> Like
       <h2>Tags</h2>
       {/* { tags.map(tag => tag)} */}
       <h1> Comments </h1>

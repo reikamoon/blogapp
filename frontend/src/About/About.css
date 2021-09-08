@@ -52,3 +52,9 @@
     line-break: auto;
 }
 
+.About a {
+    font-size: 30px;
+    margin-bottom: 50px;
+    padding-bottom: 60px;
+}
+
