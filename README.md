@@ -4,6 +4,7 @@ by reikamoon :ribbon:
 ## Table of Contents :paperclip:
 [Preview](#img)<br>
 [Project Description](#desc)<br>
+[Live Link](#live)<br>
 [Technologies Used](#tech)<br>
 [Warnings Before Installation](#warning)<br>
 [Installation](#installation)<br>
@@ -11,13 +12,17 @@ by reikamoon :ribbon:
 
 <a name="img"></a>
 ## Previews :open_file_folder:
-<img src="images/Preview1.png" alt="previewimage" width="100%" height="100%">
+<img src="images/Preview2.png" alt="previewimage" width="100%" height="100%">
 <i>Preview Image of My Blog App so Far!</i>
 
 <a name="desc"></a>
 ## Project Description :memo:
 Full Stack Blog App created with REACT, Node.js, and uses MongoDB for the database.
 Users can read articles that I wrote for my blog.
+
+<a name="live"></a>
+## Live Link :computer:
+Heroku: http://chatterbox-aa.herokuapp.com/#/
 
 <a name="tech"></a>
 ## Technologies Used :hammer:
@@ -38,7 +43,7 @@ Before installing, make sure you have Node.js/npm installed.
 ```cd frontend```<br>
 ```npm install```<br>
 :three: Install the depedencies for the <b>Back End</b> side.<br>
-```cd backend```<br>
+```cd blogapp```<br>
 ```npm install```
 
 <a name="resources"></a>
